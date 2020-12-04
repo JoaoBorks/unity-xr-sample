@@ -8,10 +8,10 @@
         "com.unity.xr.management": "3.2.9",
         "com.unity.xr.legacyinputhelpers": "2.1.4"
       },
-      "hash": "f9d253a54b52efa99e2bd45e854f95246e32be23"
+      "hash": "496905a56d2f6f920e765715380215a50eff7800"
     },
     "com.ptc.vuforia.engine": {
-      "version": "9.5.4",
+      "version": "9.6.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
