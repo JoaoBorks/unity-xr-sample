@@ -10,15 +10,6 @@
       },
       "hash": "496905a56d2f6f920e765715380215a50eff7800"
     },
-    "com.ptc.vuforia.engine": {
-      "version": "9.6.3",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0"
-      },
-      "url": "https://registry.packages.developer.vuforia.com"
-    },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 1,

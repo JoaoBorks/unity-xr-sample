@@ -159,5 +159,7 @@ public class VrModeController : MonoBehaviour
         Debug.Log("Deinitializing XR...");
         XRGeneralSettings.Instance.Manager.DeinitializeLoader();
         Debug.Log("XR deinitialized.");
+        var camera = Camera.main;
+        camera.ResetAspect();
     }
 }
