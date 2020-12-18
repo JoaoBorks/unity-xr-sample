@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/ARScene.unity
+    guid: fdff0835ee1aa1940a0783ab6d3df0a4
+  - enabled: 1
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.4.0/Hello Cardboard/Scenes/HelloCardboard.unity
     guid: 145a2a45d7bc746b19cb68410368bf96
   m_configObjects:
