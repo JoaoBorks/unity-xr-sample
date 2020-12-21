@@ -27,7 +27,7 @@ namespace easyar
         /// </summary>
         public RenderCameraParameters ExternalParameters;
 
-        private CameraImageRenderer cameraRenderer;
+        private CameraImageRendererURP cameraRenderer;
         private Matrix4x4 currentDisplayCompensation = Matrix4x4.identity;
         private CameraParameters cameraParameters;
         private bool projectHFilp;
@@ -89,7 +89,7 @@ namespace easyar
                 arSession.FrameChange += OnFrameChange;
                 arSession.FrameUpdate += OnFrameUpdate;
             }
-            cameraRenderer = GetComponent<CameraImageRenderer>();
+            cameraRenderer = GetComponent<CameraImageRendererURP>();
             if (cameraRenderer)
             {
                 cameraRenderer.OnAssemble(session);
