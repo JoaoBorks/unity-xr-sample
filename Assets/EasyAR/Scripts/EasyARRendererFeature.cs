@@ -26,10 +26,10 @@ public class EasyARRendererFeature : ScriptableRendererFeature
 
             using (new ProfilingScope(buffer, sampler))
             {
-                RenderTargetIdentifier src = BuiltinRenderTextureType.CameraTarget;
-                RenderTargetIdentifier dst = BuiltinRenderTextureType.CurrentActive;
-                buffer.Blit(src, dst, data.material);
-                buffer.SetRenderTarget(dst);
+                var source = BuiltinRenderTextureType.CameraTarget;
+                var target = BuiltinRenderTextureType.CurrentActive;
+                buffer.Blit(source, target, data.material);
+                buffer.SetRenderTarget(target);
             }
             context.ExecuteCommandBuffer(buffer);
             CommandBufferPool.Release(buffer);
@@ -41,13 +41,7 @@ public class EasyARRendererFeature : ScriptableRendererFeature
 
     EasyARRenderPass renderPass;
 
-    public override void Create()
-    {
-        renderPass = new EasyARRenderPass(data);
-    }
+    public override void Create() => renderPass = new EasyARRenderPass(data);
 
-    public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
-    {
-        renderer.EnqueuePass(renderPass);
-    }
+    public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData) => renderer.EnqueuePass(renderPass);
 }
